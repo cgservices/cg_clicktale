@@ -33,7 +33,7 @@ module CgClicktale
     end
 
     def clicktale_config
-      @clicktale_config ||= Cg_Clicktale::CONFIG.merge(@@clicktale_options || {}).merge(@clicktale_options || {})
+      @clicktale_config ||= CgClicktale.config.merge(@@clicktale_options || {}).merge(@clicktale_options || {})
     end
 
     protected

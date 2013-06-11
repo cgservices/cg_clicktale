@@ -3,24 +3,15 @@ require 'active_support'
 require 'cg_clicktale/controller'
 require 'cg_clicktale/helper'
 
-module Cg_Clicktale
+module CgClicktale
 
   def self.init
     ActionController::Base.append_view_path(File.dirname(__FILE__) + "/../../app/views") if ActionController::Base.respond_to?(:append_view_path)
-    ActionController::Base.send(:include, Cg_Clicktale::Controller)
-    ActionView::Base.send(:include, Cg_Clicktale::Helper)
+    ActionController::Base.send(:include, CgClicktale::Controller)
+    #ActionView::Base.send(:include, CgClicktale::Helper)
   end
 
-  CONFIG = HashWithIndifferentAccess.new
-  begin
-    conffile = File.join(::Rails.root, "config", "clicktale.yml")
-    conf = YAML.load(File.read(conffile))
-    CONFIG.merge!(conf[::Rails.env])
-    puts "Setting CLICKTALE"
-  rescue
-    puts "*" * 50
-    puts "#{conffile} can not be loaded:"
-    puts $!
-    puts "*" * 50
+  ActiveSupport.on_load(:action_view) do
+    include CgClicktale::Helper
   end
 end

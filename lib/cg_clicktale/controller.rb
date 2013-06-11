@@ -1,4 +1,4 @@
-module Cg_Clicktale
+module CgClicktale
   module Controller
     def self.included(base)
       base.class_eval do

@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
 
   gem.files         = `git ls-files`.split($\)
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.name          = 'cg_clicktale'
+  gem.name          = 'CgClicktale'
   gem.require_paths = ['lib']
   gem.version       = "0.0.1"
 

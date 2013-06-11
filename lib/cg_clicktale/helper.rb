@@ -1,4 +1,4 @@
-module Cg_Clicktale
+module CgClicktale
   module Helper
     def clicktale_top
       return unless clicktale_enabled?

@@ -1,0 +1,26 @@
+default: &default
+  #do_not_replace: !ruby/regexp /Not to record when this text is present on the page/i
+  #insert_after: !ruby/regexp /The top part of the script goes after this regexp, by default after opening <body> tag/
+  #insert_before: !ruby/regexp /The bottom part of the script goes before this regexp, by default before closing </body> tag/
+  allowed_addresses: "127.0.0.1"
+  do_not_process_cookie_name: "WRUID"
+  do_not_process_cookie_value: 0
+  project_id: "<%= project_id %>"
+  ratio: "<%= ratio %>"
+  param: "<%= params %>"
+
+producion:
+  <<: *default
+  enabled: true
+
+development:
+  <<: *default
+  enabled: true
+
+staging:
+  <<: *default
+  enabled: false
+
+test:
+  <<: *default
+  enabled: false

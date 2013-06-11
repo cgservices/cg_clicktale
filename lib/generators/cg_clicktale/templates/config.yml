@@ -9,17 +9,13 @@ default: &default
   ratio: "<%= ratio %>"
   param: "<%= params %>"
 
-producion:
+production:
   <<: *default
   enabled: true
 
 development:
   <<: *default
   enabled: true
-
-staging:
-  <<: *default
-  enabled: false
 
 test:
   <<: *default

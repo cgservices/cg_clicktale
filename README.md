@@ -19,11 +19,11 @@ After installation, include
 
     CgClicktale::clicktale_top()
 
-and
+after the <body> tag and
 
     CgClicktale::clicktale_bottom()
 
-in the layout.html.erb file to enable ClickTale recording.
+before the </body> tag in your layout.html.erb file to enable ClickTale recording.
 
 
 Based on the ClickTale gem by Astrials @ http://github.com/astrails/clicktale

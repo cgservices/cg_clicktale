@@ -35,6 +35,8 @@ after the <body> tag and
 
 before the </body> tag in your layout.html.erb file to enable ClickTale recording.
 
+The clicktale_top function adds the javascript to initialize the WRInit var for ClickTale and the clicktale_bottom adds the actual ClickTale script and the activation call to the script using your project id, ratio and params.
+
 ## Configuration
 The basic configuration of the CgClicktale gem can be found in the config.yml file in your Rails app.
 

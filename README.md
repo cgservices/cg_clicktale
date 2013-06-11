@@ -19,7 +19,7 @@ Install ClickTale support by using the generator
 The generator adds the *clicktale* folder to your public folder and adds two files to your Rails application; *clicktale.yml* in the config folder and *clicktale.rb* in the config/initializers folder.
 
 #### config/clicktale.yml
-This config file contains the configuration of ClickTale. It contains the project id, ratio and params and enables you to turn ClickTale on and off in the different Rails environments.
+This config file contains the configuration of ClickTale. It contains the project id, ratio and params and enables you to turn ClickTale on and off in the different Rails environments. See below for configuration options.
 
 #### config/initializers/clicktale.rb
 This initializer loads the clicktale.yml config file and sets the config in the CgClicktale gem with the options found in the config file.

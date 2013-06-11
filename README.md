@@ -1,12 +1,3 @@
-CgClicktale
-============
-
-Gem for implementing ClickTale in Rails 3 applications
-
-== Installation ==
-Include the cg_clicktale gem in your gem file. Then run <code>rails genererate cg_clicktale:install <project_id> (<ratio> <params>)</code>
-
-
 # CG ClickTale
 Gem to implement ClickTale in Rails 3 applications.
 

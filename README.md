@@ -7,6 +7,7 @@ gem 'cg_clicktale', :git => "https://github.com/cgservices/cg_clicktale.git"
 
 ### Generator
 Install ClickTale support by using the generator
+
     rails g cg_clicktale:install <project_id> (<ratio> <params>)
 
 Project ID is the ClickTale project id, for example '100000'.
@@ -15,8 +16,11 @@ Params are optional parameters, for example 'www02'. This defaults to 'www02' if
 
 ## Usage
 After installation, include
+
     CgClicktale::clicktale_top()
+
 and
+
     CgClicktale::clicktale_bottom()
 
 in the layout.html.erb file to enable ClickTale recording.
